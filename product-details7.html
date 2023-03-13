@@ -16,7 +16,7 @@
 		</div>
 		<nav>
 			<ul id="MenuItems" style="background: whitesmoke;">
-				<li onclick="menutoggle()" style="margin-right: 30px; color: black;">X</li>
+				<li id="nav-exit"style="visibility: collapse" onclick="menutoggle()" style="margin-right: 30px; color: black;">X</li>
 				<li><a href="index.html" style="color: black;">Home</a></li>
 				<li><a href="about.html" style="color: black;">About</a></li>
 				<li><a href="products.html" style="color: black;">Products</a></li>
@@ -81,8 +81,8 @@
     	
     	<div class="row"> 
     	    <div class="col-4">
-    		    <a href="product-details.html"><img src="images/Standard Red Wine5.png" alt="Snow"></a>
-    		    <a href="product-details.html"><h4>Mary Rose Pinotage Red Wine</h4></a>
+    		    <a href="product-details1.html"><img src="images/Standard Red Wine5.png" alt="Snow"></a>
+    		    <a href="product-details1.html"><h4>Mary Rose Pinotage Red Wine</h4></a>
     		    <div class="rating">
     		        <i class="fa fa-star"></i>
     		        <i class="fa fa-star"></i>
@@ -93,8 +93,8 @@
     		    <p>R119.99</p>
     	    </div>
     	    <div class="col-4">
-    		    <a href="product-details5.html"><img src="images/bottlepic3.png" alt="Snow"></a>
-    		    <a href="product-details5.html"><h4>Mary Rose Premium</h4></a>
+    		    <a href="product-details6.html"><img src="images/bottlepic3.png" alt="Snow"></a>
+    		    <a href="product-details6.html"><h4>Mary Rose Premium</h4></a>
     		    <div class="rating">
     		        <i class="fa fa-star"></i>
     		        <i class="fa fa-star"></i>
@@ -105,8 +105,8 @@
     		    <p>R259.99</p>
     	    </div>
     	    <div class="col-4">
-    		    <a href="product-details6.html"><img src="images/bottlepic5.png" alt="Snow"></a>
-    		    <a href="product-details6.html"><h4>Mary Rose Premium Gold</h4></a>
+    		    <a href="product-details7.html"><img src="images/bottlepic5.png" alt="Snow"></a>
+    		    <a href="product-details7.html"><h4>Mary Rose Premium Gold</h4></a>
     		    <div class="rating">
     		        <i class="fa fa-star"></i>
     		        <i class="fa fa-star"></i>
@@ -117,8 +117,8 @@
     		    <p>R499.99</p>
     	    </div>
     	    <div class="col-4">
-    		    <a href="product-details5.html"><img src="images/bottlepic4.png" alt="Snow"></a>
-    		    <a href="product-details5.html"><h4>Mary Rose Premium</h4></a>
+    		    <a href="product-details6.html"><img src="images/bottlepic4.png" alt="Snow"></a>
+    		    <a href="product-details6.html"><h4>Mary Rose Premium</h4></a>
     		    <div class="rating">
     		        <i class="fa fa-star"></i>
     		        <i class="fa fa-star"></i>
@@ -185,10 +185,12 @@
     		if(MenuItems.style.maxHeight == "0px")
     		{
     			MenuItems.style.maxHeight = "200px"
+    			document.getElementById("nav-exit").style.visibility = "";
     		}
     		else
     		{
-    		    MenuItems.style.maxHeight = "0px"	
+    		    MenuItems.style.maxHeight = "0px"
+    		    document.getElementById("nav-exit").style.visibility = "collapse";	
     		}
     	}
     </script>

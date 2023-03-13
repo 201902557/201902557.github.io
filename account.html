@@ -16,7 +16,7 @@
 		</div>
 		<nav>
 			<ul id="MenuItems" style="background: whitesmoke;">
-				<li onclick="menutoggle()" style="margin-right: 30px; color: black;">X</li>
+				<li id="nav-exit"style="visibility: collapse" onclick="menutoggle()" style="margin-right: 30px; color: black;">X</li>
 				<li><a href="index.html" style="color: black;">Home</a></li>
 				<li><a href="about.html" style="color: black;">About</a></li>
 				<li><a href="products.html" style="color: black;">Products</a></li>
@@ -114,10 +114,12 @@
     		if(MenuItems.style.maxHeight == "0px")
     		{
     			MenuItems.style.maxHeight = "200px"
+    			document.getElementById("nav-exit").style.visibility = "";
     		}
     		else
     		{
-    		    MenuItems.style.maxHeight = "0px"	
+    		    MenuItems.style.maxHeight = "0px"
+    		    document.getElementById("nav-exit").style.visibility = "collapse";	
     		}
     	}
     </script>

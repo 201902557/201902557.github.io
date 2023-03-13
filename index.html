@@ -18,7 +18,7 @@
 		</div>
 		<nav>
 			<ul id="MenuItems" style="background: whitesmoke;">
-				<li onclick="menutoggle()" style="margin-right: 30px; color: black;">X</li>
+				<li id="nav-exit"style="visibility: collapse" onclick="menutoggle()" style="margin-right: 30px; color: black;">X</li>
 				<li><a href="index.html" style="color: black;">Home</a></li>
 				<li><a href="about.html" style="color: black;">About</a></li>
 				<li><a href="products.html" style="color: black;">Products</a></li>
@@ -294,17 +294,6 @@
     		<p class="copyright">Copyright 2024 - Mary Rose</p>
     	</div>
     </div>
-
-    <!---------js for cart icon------------->
-    <script>
-    	function showCartImg()
-		{
-			let cart_pic1 = document.getElementById("cart_pic1");
-			cart_pic1.src = "images/cart red circle 1.png";
-			document.getElementById("cart_button").style.display = "block";
-			cartTotal();
-		}
-	</script>
 	
     <!----------js for toggle menu----------->
     <script>
@@ -316,10 +305,12 @@
     		if(MenuItems.style.maxHeight == "0px")
     		{
     			MenuItems.style.maxHeight = "200px"
+    			document.getElementById("nav-exit").style.visibility = "";
     		}
     		else
     		{
-    		    MenuItems.style.maxHeight = "0px"	
+    		    MenuItems.style.maxHeight = "0px"
+    		    document.getElementById("nav-exit").style.visibility = "collapse";	
     		}
     	}
     </script>

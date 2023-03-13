@@ -779,6 +779,7 @@ function removeCartItem1()
     document.getElementById("wine-total-price").innerHTML = "R" + sessionStorage.getItem("winetotalprice");
     sessionStorage.setItem("logic1", "0");
     sessionStorage.setItem("proceedtocheckoutlogic", "0");
+    addWineToCartOnload();
 }
 function removeCartItem2()
 {
@@ -814,6 +815,7 @@ function removeCartItem2()
     document.getElementById("wine-total-price").innerHTML = "R" + sessionStorage.getItem("winetotalprice");
     sessionStorage.setItem("logic2", "0");
     sessionStorage.setItem("proceedtocheckoutlogic", "0");
+    addWineToCartOnload();
 }
 function removeCartItem3()
 {
@@ -849,6 +851,7 @@ function removeCartItem3()
     document.getElementById("wine-total-price").innerHTML = "R" + sessionStorage.getItem("winetotalprice");
     sessionStorage.setItem("logic3", "0");
     sessionStorage.setItem("proceedtocheckoutlogic", "0");
+    addWineToCartOnload();
 }
 function removeCartItem4()
 {
@@ -884,6 +887,7 @@ function removeCartItem4()
     document.getElementById("wine-total-price").innerHTML = "R" + sessionStorage.getItem("winetotalprice");
     sessionStorage.setItem("logic4", "0");
     sessionStorage.setItem("proceedtocheckoutlogic", "0");
+    addWineToCartOnload();
 }
 function removeCartItem5()
 {
@@ -919,6 +923,7 @@ function removeCartItem5()
     document.getElementById("wine-total-price").innerHTML = "R" + sessionStorage.getItem("winetotalprice");
     sessionStorage.setItem("logic5", "0");
     sessionStorage.setItem("proceedtocheckoutlogic", "0");
+    addWineToCartOnload();
 }
 function removeCartItem6()
 {
@@ -954,6 +959,7 @@ function removeCartItem6()
     document.getElementById("wine-total-price").innerHTML = "R" + sessionStorage.getItem("winetotalprice");
     sessionStorage.setItem("logic6", "0");
     sessionStorage.setItem("proceedtocheckoutlogic", "0");
+    addWineToCartOnload();
 }
 function removeCartItem7()
 {
@@ -989,6 +995,7 @@ function removeCartItem7()
     document.getElementById("wine-total-price").innerHTML = "R" + sessionStorage.getItem("winetotalprice");
     sessionStorage.setItem("logic7", "0");
     sessionStorage.setItem("proceedtocheckoutlogic", "0");
+    addWineToCartOnload();
 }
 function removeCartItem8()
 {
@@ -1024,6 +1031,7 @@ function removeCartItem8()
     document.getElementById("wine-total-price").innerHTML = "R" + sessionStorage.getItem("winetotalprice");
     sessionStorage.setItem("logic8", "0");
     sessionStorage.setItem("proceedtocheckoutlogic", "0");
+    addWineToCartOnload();
 }
 function proceedToCheckOut()
 {
