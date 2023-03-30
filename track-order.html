@@ -3,12 +3,10 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Mary Rose All Products</title>
+	<title>Mary Rose Track Order</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script type="cart.js" async>
-	</script>
 </head>
 <body onload = "showCartImgOnload()">
 	<div class="container">
@@ -31,19 +29,27 @@
 	</div>
 	</div>
 
+<!--------- single product details ------------>
+    
+    <div class="small-container">
+    	<div class="row" style="margin: 100px; padding: 100px; font-family: verdana; font-size: large;">
+    		<h1>TRACK ORDER COMING SOON....!</h1>
+    	</div>
+    </div>
+
+<!----------title------------>
+    <div class="small-container">
+    	<div class="row row-2">
+    		<h2>Related Products</h2>
+    		<p>View More</p>
+    	</div>
+    </div>
+
+
+<!---------products----------->
     <div class="small-container">
 
-    	<div class="row row-2">
-    		<h2>All Products</h2>
-    	    <select>
-    		     <option>Deafault Sorting</option>
-    		     <option>Sort by price</option>
-    		     <option>Sort by popularity</option>
-    		     <option>Sort by rating</option>
-    		     <option>Sort by sale</option>
-    	    </select>
-        </div>
-
+    	
     	<div class="row"> 
     	    <div class="col-4">
     		    <a href="product-details1.html"><img src="images/Standard Red Wine5.png" alt="Snow"></a>
@@ -95,85 +101,7 @@
     	    </div>
         </div>
 
-    	
-    	<div class="row"> 
-    	    <div class="col-4">
-    	    	<a href="product-details4.html"><img src="images/Vintage Limited.jpeg" alt="Snow"></a>
-    		    <a href="product-details4.html"><h4>Mary Rose Vintage Limited Edition</h4></a>
-    		    <div class="rating">
-    		        <i class="fa fa-star"></i>
-    		        <i class="fa fa-star"></i>
-    		        <i class="fa fa-star"></i>
-    		        <i class="fa fa-star"></i>
-    		        <i class="fa fa-star-o"></i>
-    		    </div>
-    		    <p>R199.99</p>
-    	    </div>
-    	    <div class="col-4">
-    		    <a href="product-details3.html"><img src="images/Vintage blue.jpeg" alt="Snow"></a>
-    		    <a href="product-details3.html"><h4>Mary Rose Vintage Blue</h4></a>
-    		    <div class="rating">
-    		        <i class="fa fa-star"></i>
-    		        <i class="fa fa-star"></i>
-    		        <i class="fa fa-star"></i>
-    		        <i class="fa fa-star"></i>
-    		        <i class="fa fa-star-half-o"></i>
-    		    </div>
-    		    <p>R249.99</p>
-    	    </div>
-    	    <div class="col-4">
-    		    <a href="product-details1.html"><img src="images/Standard Red Wine1.jpeg" alt="Snow"></a>
-    		    <a href="product-details1.html"><h4>Mary Rose Pinotage Red Wine</h4></a>
-    		    <div class="rating">
-    		        <i class="fa fa-star"></i>
-    		        <i class="fa fa-star"></i>
-    		        <i class="fa fa-star"></i>
-    		        <i class="fa fa-star"></i>
-    		        <i class="fa fa-star-o"></i>
-    		    </div>
-    		    <p>R119.99</p>
-    	    </div>
-    	    <div class="col-4">
-    		    <a href="product-details2.html"><img src="images/Vintage normal.jpeg" alt="Snow"></a>
-    		    <a href="product-details2.html"><h4>Mary Rose Vintage Original</h4></a>
-    		    <div class="rating">
-    		        <i class="fa fa-star"></i>
-    		        <i class="fa fa-star"></i>
-    		        <i class="fa fa-star"></i>
-    		        <i class="fa fa-star-half-o"></i>
-    		        <i class="fa fa-star-o"></i>
-    		    </div>
-    		    <p>R149.99</p>
-    	    </div>
-        </div>
-        <div class="row">
-        	<div class="col-4" padding = "0px" align = "left">
-    		   <a href="product-details5.html"><img src="images/Vintage blue2.png" alt="Snow"></a>
-    		    <a href="product-details5.html"><h4>Mary Rose Blue Edition</h4></a>
-    		    <div class="rating">
-    		        <i class="fa fa-star"></i>
-    		        <i class="fa fa-star"></i>
-    		        <i class="fa fa-star"></i>
-    		        <i class="fa fa-star-o"></i>
-    		        <i class="fa fa-star-o"></i>
-    		    </div>
-    		    <p>R299.99</p>
-    	    </div>
-    	    <div class="col-4">
-    	    </div>
-    	    <div class="col-4">
-    	    </div>
-    	    <div class="col-4">
-    	    </div>
-    	</div>
 
-        <div class="page-btn">
-        	<span>1</span>
-        	<span>2</span>
-        	<span>3</span>
-        	<span>4</span>
-        	<span>&#8594;</span>
-        </div>
     </div> 
 
     <!--------- footer --------->
@@ -215,7 +143,10 @@
     		<p class="copyright">Copyright 2024 - Mary Rose</p>
     	</div>
     </div>
-
+	<!---------js for addCart ------------->
+    <script src="cart.js">
+   
+	</script>
     <!----------js for toggle menu----------->
     <script>
     	var MenuItems = document.getElementById("MenuItems");
@@ -235,5 +166,32 @@
     		}
     	}
     </script>
+
+
+<!----------js for product gallery ---------->
+
+<script>
+	var ProductImg = document.getElementById("ProductImg");
+	var SmallImg = document.getElementsByClassName("small-img");
+
+	    SmallImg[0].onclick = function()
+	    {
+	        ProductImg.src = SmallImg[0].src;	
+	    }
+	    SmallImg[1].onclick = function()
+	    {
+	        ProductImg.src = SmallImg[1].src;	
+	    }
+	    SmallImg[2].onclick = function()
+	    {
+	        ProductImg.src = SmallImg[2].src;	
+	    }
+	    SmallImg[3].onclick = function()
+	    {
+	        ProductImg.src = SmallImg[3].src;	
+	    }
+</script>
+
+
 </body>
 </html>

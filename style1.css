@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Ubuntu');
 *{
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
   font-family: 'Ubuntu', sans-serif;
 }
 
 body{
-  background: #2196F3;
-  margin: 0 10px;
+  background: grey;
 }
 
 .payment{
@@ -83,6 +82,9 @@ body{
   border-radius: 5px;
   cursor: pointer;
 }
+.btn:hover{
+  background: #2085F3;
+}
 
 
 .payment-logo{
@@ -116,9 +118,34 @@ body{
   font-family: 'Baloo Bhaijaan', cursive;
   font-size: 58px;
 }
-
-
-@media screen and (max-width: 420px){
+/*-------media query for less than 420 screen size----*/
+@media only screen and (max-width: 420px){
+  .card-grp{
+    flex-direction: column;
+  }
+  .card-item{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .btn{
+    margin-top: 20px;
+  }
+}
+/*-------media query for less than 800 screen size----*/
+@media only screen and (max-width: 800px){
+  .card-grp{
+    flex-direction: column;
+  }
+  .card-item{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .btn{
+    margin-top: 20px;
+  }
+}
+/*-------media query for less than 600 screen size----*/
+@media only screen and (max-width: 600px){
   .card-grp{
     flex-direction: column;
   }
