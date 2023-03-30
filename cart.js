@@ -1048,7 +1048,7 @@ function proceedToCheckOut()
         removeCartItem8();
         document.getElementById("purchase-button").style.visibility = "collapse";
         addWineToCartOnload();
-        window.open("checkout-payment.html");
+        window.open("checkout-address.html");
     }
     else
     {
@@ -1058,11 +1058,13 @@ function proceedToCheckOut()
 function addressCheckout()
 {
         alert("Proceed To Check Out");
+        window.close("checkout-address.html");
         window.open("checkout-payment.html");
 }
 function payCheckout()
 {
         alert("Thank you for your purchase. Email has been sent with Delivery Details!");
+        window.close("checkout-payment.html");
         window.open("track-order.html");
 }
 function openNav() {
