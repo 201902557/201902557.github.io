@@ -1059,12 +1059,12 @@ function addressCheckout()
 {
         alert("Proceed To Check Out");
         window.close("checkout-address.html");
-        window.open("checkout-payment.html");
+        window.open("checkout-payment-FNB.html");
 }
 function payCheckout()
 {
         alert("Thank you for your purchase. Email has been sent with Delivery Details!");
-        window.close("checkout-payment.html");
+        window.close("checkout-payment-FNB.html");
         window.open("track-order.html");
 }
 
