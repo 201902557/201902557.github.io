@@ -1038,6 +1038,7 @@ function proceedToCheckOut()
     if(sessionStorage.getItem("proceedtocheckoutlogic") == "1")
     {
         alert("Proceed To Check Out");
+        window.open("checkout-payment.html");
         removeCartItem1();
         removeCartItem2();
         removeCartItem3();
