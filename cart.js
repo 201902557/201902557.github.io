@@ -1067,10 +1067,10 @@ function payCheckout()
         window.close("checkout-payment.html");
         window.open("track-order.html");
 }
+
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }
-
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
