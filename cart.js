@@ -1037,8 +1037,7 @@ function proceedToCheckOut()
 {
     if(sessionStorage.getItem("proceedtocheckoutlogic") == "1")
     {
-        alert("Proceed To Check Out");
-        window.open("checkout-payment.html");
+        alert("Proceed To Check Out and Billing Address");
         removeCartItem1();
         removeCartItem2();
         removeCartItem3();
@@ -1049,11 +1048,22 @@ function proceedToCheckOut()
         removeCartItem8();
         document.getElementById("purchase-button").style.visibility = "collapse";
         addWineToCartOnload();
+        window.open("checkout-payment.html");
     }
     else
     {
         alert("Your Basket Is Empty!");
     }
+}
+function addressCheckout()
+{
+        alert("Proceed To Check Out");
+        window.open("checkout-payment.html");
+}
+function payCheckout()
+{
+        alert("Thank you for your purchase. Email has been sent with Delivery Details!");
+        window.open("track-order.html");
 }
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
