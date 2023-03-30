@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Ubuntu');
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+  background: grey;
+}
+
+.width30 {
+  width: 30%;
+}
+.width70 {
+  width: 70%; 
+}
+.floatL{
+  float: left;
+}
+.floatR{
+  float: right;
+}
+.boxStyle{
+  padding: 20px; 
+  border-radius: 25px; 
+  border-top: 6px solid #dc3545;
+  border-bottom: 6px solid #28a745;
+}
