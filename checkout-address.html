@@ -1,116 +1,208 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Checkout Address & Billing Form</title>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
-<link rel="stylesheet" href="style-checkout-address.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-   $(document).ready(function(){ 
-     $('#check-address').click(function(){ 
-     if ($('#check-address').is(":checked")) {
-      $('#txtfname_billing').val($('#txtfname').val());
-      $('#txtlname_billing').val($('#txtlname').val());
-      $('#txtaddress_billing').val($('#txtaddress').val());
-      $('#txtcity_billing').val($('#txtcity').val());
-      var country = $('#country option:selected').val();
-      $('#country_billing option[value=' + country + ']').attr('selected','selected');
-     } else { //Clear on uncheck
-      $('#txtfname_billing').val("");
-      $('#txtlname_billing').val("");
-      $('#txtaddress_billing').val("");
-      $('#txtcity_billing').val("");
-      $('#country_billing option[value=""]').attr('selected','selected');
-     };
-    });
-   });
-</script>
-<script type="cart.js" async>
-</script>
-</head>
-<body>
- <header class="bg-dark" style="height: 60px; padding: 5px;">
-  <h3 class="text-light" style="text-align: center;">Personal Info & Billing Address</h3>
- </header>
- <div class="container bg-dark">
- <div class="row">
-  <div class="col-sm-1"></div>
-  <div class="col-sm-2"></div>  
-  <div class="col-sm-6 bg-light boxStyle">
-   <form name="theform" action="" method="post">
-   <div class="form-group">
-    <div class="width30 floatL"><label>Firstname</label></div>
-    <div class="width70 floatR"><input type="text" id="txtfname" name="txtfname" placeholder="First Name" class="form-control"></div><br><br>
-   </div>
-   <div class="form-group">
-    <div class="width30 floatL"><label>Lastname</label></div>
-    <div class="width70 floatR"><input type="text" id="txtlname" name="txtlname" placeholder="Last Name" class="form-control"></div>
-   </div><br>
-   <div class="form-group">
-    <div class="width30 floatL"><label>Address</label></div>
-    <div class="width70 floatR"><input type="text" id="txtaddress" name="txtaddress" placeholder="Ship to Address" class="form-control"></div>
-   </div><br>
-   <div class="form-group">
-    <div class="width30 floatL"><label>City</label></div>
-    <div class="width70 floatR"><input type="text" id="txtcity" name="txtcity" placeholder="Ship to City" class="form-control"></div>
-   </div><br>
-   <div class="form-group">
-    <div class="width30 floatL"><label>Country</label></div>
-    <div class="width70 floatR"><select name="country" size="1" id="country" class="form-control">
-     <option value="">Select Country..</option>  
-     <option value="Philippines">Philippines</option>
-     </select></div>
-   </div><br>
-   <hr/> 
-   <p><b>Billing Information <label><input type="checkbox" value="" id="check-address">Same as billing?</label></b></p> 
-   <div class="form-group">
-    <div class="width30 floatL"><label>Firstname</label></div>
-    <div class="width70 floatR"><input type="text" id="txtfname_billing" name="txtfname_billing" placeholder="First Name" class="form-control">
-   </div><br><br>
-   <div class="form-group">
-    <div class="width30 floatL"><label>Lastname</label></div>
-    <div class="width70 floatR"><input type="text" id="txtlname_billing" name="txtlname_billing" placeholder="Last Name" class="form-control"></div>
-   </div><br>
-   <div class="form-group">
-    <div class="width30 floatL"><label>Address</label></div>
-    <div class="width70 floatR"><input type="text" id="txtaddress_billing" name="txtaddress_billing" placeholder="Ship to Address" class="form-control"></div>
-   </div><br>
-   <div class="form-group">
-    <div class="width30 floatL"><label>City</label></div>
-    <div class="width70 floatR"><input type="text" id="txtcity_billing" name="txtcity_billing" placeholder="Ship to City" class="form-control"></div>
-   </div><br>
-   <div class="form-group">
-    <div class="width30 floatL"><label>Country</label></div>
-    <div class="width70 floatR"><select name="country_billing" size="1" id="country_billing" class="form-control">
-      <option value="">Select Country..</option>  
-     <option value="Philippines">Philippines</option>
-      </select></div>
-   </div><br> 
-   
-   <div class="form-group">
-   <div class="row">
-   <div class="floatR"><br/><input class="btn btn-success" type="submit"   value="Proceed to Payment" style="font-weight: bold" onclick="addressCheckout()"></div> 
-   </div>
-   </div>
-   </form>      
-  </div>
-  <div class="col-sm-1"></div>
-  <div class="col-sm-2"></div>
-  </div> 
- </div> 
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-<!---------js for cart------------->
-  <script src="cart.js">
-      
-  </script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary Rose Address & Billing</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">
+    <link rel="stylesheet" href="style-checkout-address.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){ 
+      $('#check-address').click(function(){ 
+      if ($('#check-address').is(":checked"))
+      {
+        $('#shipping-first-name').val($('#billing-first-name').val());
+        $('#shipping-last-name').val($('#billing-last-name').val());
+        $('#shipping-address-line1').val($('#billing-address-line1').val());
+        $('#shipping-address-line2').val($('#billing-address-line2').val());
+        $('#shipping-postal-code').val($('#billing-postal-code').val());
+        $('#shipping-city').val($('#billing-city').val());
+        var country = $('#billing-country option:selected').val();
+        $('#shipping-country option[value=' + country + ']').attr('selected','selected');
+        $('#shipping-email').val($('#billing-email').val());
+        $('#shipping-phone-number').val($('#billing-phone-number').val());
+        $('#shipping-id').val($('#billing-id').val());
+      }
+      else
+      { 
+        //Clear on uncheck
+        $('#shipping-first-name').val("");
+        $('#shipping-last-name').val("");
+        $('#shipping-address-line1').val("");
+        $('#shipping-address-line2').val("");
+        $('#shipping-postal-code').val("");
+        $('#shipping-city').val("");
+        $('#shipping-country option[value=""]').attr('selected','selected');
+        $('#shipping-email').val("");
+        $('#shipping-phone-number').val("");
+        $('#shipping-id').val("");
+        };
+      });
+      });
+    </script>
+    <script type="cart.js" async>
+    </script>
+  </head>
+  <body>
+    <header class="bg-dark" style="height: 60px; padding: 5px;">
+      <h3 class="text-light" style="text-align: center;">Personal Info & Billing Address</h3>
+    </header>
+    <div class="container bg-dark">
+    <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-2"></div>  
+    <div class="col-sm-6 bg-light boxStyle">
+      <?php 
+      $the_data = htmlspecialchars( $the_data, ENT_NOQUOTES, 'utf-8' );
+      echo "$the_data";
+      ?>
+      <form name="address_form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <div class="form-group">
+            <div class="width30 floatL"><label>Firstname</label></div>
+              <div class="width70 floatR"><input type="text" id="billing-first-name" name="billing_first_name" placeholder="First Name" class="form-control" value="<?php echo $billing_first_name;?>"><span class="error">* <?php echo $billing_first_nameErr;?></span><br><br>
+              </div><br><br>
+        </div>
+        <div class="form-group">
+            <div class="width30 floatL"><label>Lastname</label></div>
+            <div class="width70 floatR"><input type="text" id="billing-last-name" name="billing_last_name" placeholder="Last Name" class="form-control" value="<?php echo $billing_last_name;?>"><span class="error">* <?php echo $billing_last_nameErr;?></span><br><br></div>
+        </div><br><br><br>
+        <div class="form-group">
+            <div class="width30 floatL"><label>Address line 1</label></div>
+            <div class="width70 floatR"><input type="text" id="billing-address-line1" name="billing_address_line1" placeholder="Ship to Address line 1" class="form-control" value="<?php echo $billing_address_line1;?>"><span class="error">* <?php echo $billing_address_line1Err;?></span><br><br></div>
+        </div><br><br>
+        <div class="form-group">
+            <div class="width30 floatL"><label>Address line 2</label></div>
+            <div class="width70 floatR"><input type="text" id="billing-address-line2" name="billing_address_line2" placeholder="Ship to Address line 2" class="form-control" value="<?php echo $billing_address_line2;?>"><span class="error">* <?php echo $billing_address_line2Err;?></span><br><br></div>
+        </div><br><br>
+        <div class="form-group">
+            <div class="width30 floatL"><label>Postal Code</label></div>
+            <div class="width70 floatR"><input type="text" id="billing-postal-code" name="billing_postal_code" placeholder="Postal Code" class="form-control" value="<?php echo $billing_postal_code;?>"><span class="error">* <?php echo $billing_postal_codeErr;?></span><br><br></div>
+        </div><br>
+        <div class="form-group">
+            <div class="width30 floatL"><label>City</label></div>
+            <div class="width70 floatR"><input type="text" id="billing-city" name="billing_city" placeholder="Ship to City" class="form-control" value="<?php echo $billing_city;?>"><span class="error">* <?php echo $billing_cityErr;?></span><br><br></div>
+        </div><br>
+        <div class="form-group">
+          <div class="width30 floatL"><label>Country</label></div>
+          <div class="width70 floatR">
+            <select name="billing_country" size="1" id="billing-country" class="form-control" value="<?php echo $billing_country;?>">
+              <option value="">Select Country..</option>
+              <option value="Australia">Australia</option>
+              <option value="Britain">Britain</option>
+              <option value="China">China</option>
+              <option value="Egypt">Egypt</option>
+              <option value="England">England</option>
+              <option value="France">France</option>
+              <option value="Germany">Germany</option>
+              <option value="Italy">Italy</option>
+              <option value="Mauritius">Mauritius</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Nigeria">Nigeria</option>
+              <option value="Portugal">Portugal</option>
+              <option value="Russia">Russia</option>  
+              <option value="South_Africa">South Africa</option>
+              <option value="Thailand">Thailand</option>
+              <option value="USA">USA</option>
+            </select><span class="error">* <?php echo $billing_countryErr;?></span><br><br>
+          </div>
+        </div><br>
+        <div class="form-group">
+          <div class="width30 floatL"><label>Email</label></div>
+          <div class="width70 floatR"><input type="text" id="billing-email" name="billing_email" placeholder="Email" class="form-control" value="<?php echo $billing_email;?>"><span class="error">* <?php echo $billing_emailErr;?></span><br><br></div>
+        </div><br>
+        <div class="form-group">
+          <div class="width30 floatL"><label>Phone Number</label></div>
+          <div class="width70 floatR"><input type="text" id="billing-phone-number" name="billing_phone_number" placeholder="Phone Number" class="form-control" value="<?php echo $billing_phone_number;?>"><span class="error">* <?php echo $billing_phone_numberErr;?></span><br><br></div>
+        </div><br>
+        <div class="form-group">
+          <div class="width30 floatL"><label>ID Number</label></div>
+          <div class="width70 floatR"><input type="text" id="billing-id" name="billing_id" placeholder="ID Number" class="form-control" value="<?php echo $billing_id;?>"><span class="error">* <?php echo $billing_idErr;?></span><br><br></div>
+        </div><br><br/> 
+        <p><b>Shipping Information <label><input name="check_address" type="checkbox" value="" id="check-address" value="<?php echo $check_address;?>"> Same as Billing Information?</label></b></p> 
+        <div class="form-group">
+          <div class="width30 floatL"><label>Firstname</label></div>
+          <div class="width70 floatR"><input type="text" id="shipping-first-name" name="shipping_first_name" placeholder="First Name" class="form-control" value="<?php echo $shipping_first_name;?>"><span class="error">* <?php echo $shipping_first_nameErr;?></span><br><br></div><br><br>
+        </div>
+        <div class="form-group">
+          <div class="width30 floatL"><label>Lastname</label></div>
+          <div class="width70 floatR"><input type="text" id="shipping-last-name" name="shipping_last_name" placeholder="Last Name" class="form-control" value="<?php echo $shipping_last_name;?>"><span class="error">* <?php echo $shipping_last_nameErr;?></span><br><br></div>
+        </div><br><br><br>
+        <div class="form-group">
+          <div class="width30 floatL"><label>Address line 1</label></div>
+          <div class="width70 floatR"><input type="text" id="shipping-address-line1" name="shipping_address_line1" placeholder="Ship to Address line 1" class="form-control" value="<?php echo $shipping_address_line1;?>"><span class="error">* <?php echo $shipping_address_line1Err;?></span><br><br></div>
+        </div><br><br>
+        <div class="form-group">
+          <div class="width30 floatL"><label>Address line 2</label></div>
+          <div class="width70 floatR"><input type="text" id="shipping-address-line2" name="shipping_address_line2" placeholder="Ship to Address line 2" class="form-control" value="<?php echo $shipping_address_line2;?>"><span class="error">* <?php echo $shipping_address_line2Err;?></span><br><br></div>
+        </div><br><br>
+        <div class="form-group">
+          <div class="width30 floatL"><label>Postal Code</label></div>
+          <div class="width70 floatR"><input type="text" id="shipping-postal-code" name="shipping_postal_code" placeholder="Postal Code" class="form-control" value="<?php echo $shipping_postal_code;?>"><span class="error">* <?php echo $shipping_postal_codeErr;?></span><br><br></div>
+        </div><br>
+        <div class="form-group">
+          <div class="width30 floatL"><label>City</label></div>
+          <div class="width70 floatR"><input type="text" id="shipping-city" name="shipping_city" placeholder="Ship to City" class="form-control" value="<?php echo $shipping_city;?>"><span class="error">* <?php echo $shipping_cityErr;?></span><br><br></div>
+        </div><br>
+        <div class="form-group">
+          <div class="width30 floatL"><label>Country</label></div>
+          <div class="width70 floatR">
+            <select name="shipping_country" size="1" id="shipping-country" class="form-control" value="<?php echo $shipping_country;?>">
+              <option value="">Select Country..</option>
+              <option value="Australia">Australia</option>
+              <option value="Britain">Britain</option>
+              <option value="China">China</option>
+              <option value="Egypt">Egypt</option>
+              <option value="England">England</option>
+              <option value="France">France</option>
+              <option value="Germany">Germany</option>
+              <option value="Italy">Italy</option>
+              <option value="Mauritius">Mauritius</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Nigeria">Nigeria</option>
+              <option value="Portugal">Portugal</option>
+              <option value="Russia">Russia</option>  
+              <option value="South_Africa">South Africa</option>
+              <option value="Thailand">Thailand</option>
+              <option value="USA">USA</option>
+            </select><span class="error">* <?php echo $shipping_countryErr;?></span><br><br>
+          </div>
+        </div><br>
+        <div class="form-group">
+          <div class="width30 floatL"><label>Email</label></div>
+          <div class="width70 floatR"><input type="text" id="shipping-email" name="shipping_email" placeholder="Email" class="form-control" value="<?php echo $shipping_email;?>"><span class="error">* <?php echo $shipping_emailErr;?></span><br><br></div>
+        </div><br>
+        <div class="form-group">
+          <div class="width30 floatL"><label>Phone Number</label></div>
+          <div class="width70 floatR"><input type="text" id="shipping-phone-number" name="shipping_phone_number" placeholder="Phone Number" class="form-control" value="<?php echo $shipping_phone_number;?>"><span class="error">* <?php echo $shipping_phone_numberErr;?></span><br><br></div>
+        </div><br>
+        <div class="form-group">
+          <div class="width30 floatL"><label>ID Number</label></div>
+          <div class="width70 floatR"><input type="text" id="shipping-id" name="shipping_id" placeholder="ID Number" class="form-control" value="<?php echo $shipping_id;?>"><span class="error">* <?php echo $shipping_idErr;?></span><br><br></div>
+        </div><br><br>
+        <div class="form-group">
+          <div class="width30 floatL"><label>Delivery Comment</label></div>
+          <div class="width70 floatR"><input type="text" id="shipping-delivery-comment" name="shipping_delivery_comment" placeholder="Comment" class="form-control" value="<?php echo $shipping_comment;?>"></div>
+        </div><br>  
+        <div class="form-group">
+          <div class="row">
+            <div class="floatR"><br/><input class="AddressSubmit" type="submit"   value="Proceed to Payment" onclick="addressCheckout()"></div> 
+          </div>
+        </div>
+      </form>      
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-2"></div>
+    </div> 
+    </div> 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <!---------js for cart------------->
+    <script src="cart.js">
+    </script>
+  </body>
 </html>
