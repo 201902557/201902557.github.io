@@ -7,7 +7,7 @@
 }
 
 body{
-  background: grey;
+  background-image: url("images/Rose background3.jpeg");
 }
 
 .width30 {
@@ -21,7 +21,29 @@ body{
 }
 .floatR{
   float: right;
+
 }
+
+.error {color: #FF0000;}
+
+.AddressSubmit{
+  display: inline-block;
+  background: green;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  border-width: 5px;
+  border-radius: 30px;
+  transition: background 0.5s;
+  font-weight: bold; 
+  font-family: verdana; 
+  margin-right: 50px;
+}
+
+.AddressSubmit:hover{
+  background: darkgreen;
+}
+
 .boxStyle{
   padding: 20px; 
   border-radius: 25px; 
