@@ -45,8 +45,6 @@
       });
       });
     </script>
-    <script type="cart.js" async>
-    </script>
   </head>
   <body>
     <header class="bg-dark" style="height: 60px; padding: 5px;">
@@ -57,40 +55,36 @@
     <div class="col-sm-1"></div>
     <div class="col-sm-2"></div>  
     <div class="col-sm-6 bg-light boxStyle">
-      <?php 
-      $the_data = htmlspecialchars( $the_data, ENT_NOQUOTES, 'utf-8' );
-      echo "$the_data";
-      ?>
-      <form name="address_form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+      <form name="address_form" method="post" action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>">
         <div class="form-group">
             <div class="width30 floatL"><label>Firstname</label></div>
-              <div class="width70 floatR"><input type="text" id="billing-first-name" name="billing_first_name" placeholder="First Name" class="form-control" value="<?php echo $billing_first_name;?>"><span class="error">* <?php echo $billing_first_nameErr;?></span><br><br>
+              <div class="width70 floatR"><input required="required" type="text" id="billing-first-name" name="billing_first_name" placeholder="First Name" class="form-control" value=""><span class="error">* <?php echo $billing_first_nameErr;?></span><br><br>
               </div><br><br>
         </div>
         <div class="form-group">
             <div class="width30 floatL"><label>Lastname</label></div>
-            <div class="width70 floatR"><input type="text" id="billing-last-name" name="billing_last_name" placeholder="Last Name" class="form-control" value="<?php echo $billing_last_name;?>"><span class="error">* <?php echo $billing_last_nameErr;?></span><br><br></div>
+            <div class="width70 floatR"><input type="text" id="billing-last-name" name="billing_last_name" placeholder="Last Name" class="form-control" value=""><span class="error">* <?php echo $billing_last_nameErr;?></span><br><br></div>
         </div><br><br><br>
         <div class="form-group">
-            <div class="width30 floatL"><label>Address line 1</label></div>
-            <div class="width70 floatR"><input type="text" id="billing-address-line1" name="billing_address_line1" placeholder="Ship to Address line 1" class="form-control" value="<?php echo $billing_address_line1;?>"><span class="error">* <?php echo $billing_address_line1Err;?></span><br><br></div>
+            <div class="width30 floatL"><label>Address line 1</label></div><br><br>
+            <div class="width70 floatR"><input type="text" id="billing-address-line1" name="billing_address_line1" placeholder="Ship to Address line 1" class="form-control" value=""><span class="error">* <?php echo $billing_address_line1Err;?></span><br><br></div>
         </div><br><br>
         <div class="form-group">
-            <div class="width30 floatL"><label>Address line 2</label></div>
-            <div class="width70 floatR"><input type="text" id="billing-address-line2" name="billing_address_line2" placeholder="Ship to Address line 2" class="form-control" value="<?php echo $billing_address_line2;?>"><span class="error">* <?php echo $billing_address_line2Err;?></span><br><br></div>
+            <div class="width30 floatL"><label>Address line 2</label></div><br><br>
+            <div class="width70 floatR"><input type="text" id="billing-address-line2" name="billing_address_line2" placeholder="Ship to Address line 2" class="form-control" value=""><span class="error"></span><br><br></div>
         </div><br><br>
         <div class="form-group">
-            <div class="width30 floatL"><label>Postal Code</label></div>
-            <div class="width70 floatR"><input type="text" id="billing-postal-code" name="billing_postal_code" placeholder="Postal Code" class="form-control" value="<?php echo $billing_postal_code;?>"><span class="error">* <?php echo $billing_postal_codeErr;?></span><br><br></div>
+            <div class="width30 floatL"><label>Postal Code</label></div><br><br>
+            <div class="width70 floatR"><input type="text" id="billing-postal-code" name="billing_postal_code" placeholder="Postal Code" class="form-control" value=""><span class="error">* <?php echo $billing_postal_codeErr;?></span><br><br></div>
         </div><br>
         <div class="form-group">
-            <div class="width30 floatL"><label>City</label></div>
-            <div class="width70 floatR"><input type="text" id="billing-city" name="billing_city" placeholder="Ship to City" class="form-control" value="<?php echo $billing_city;?>"><span class="error">* <?php echo $billing_cityErr;?></span><br><br></div>
+            <div class="width30 floatL"><label>City</label></div><br><br>
+            <div class="width70 floatR"><input type="text" id="billing-city" name="billing_city" placeholder="Ship to City" class="form-control" value=""><span class="error">* <?php echo $billing_cityErr;?></span><br><br></div>
         </div><br>
         <div class="form-group">
-          <div class="width30 floatL"><label>Country</label></div>
+          <div class="width30 floatL"><label>Country</label></div><br><br>
           <div class="width70 floatR">
-            <select name="billing_country" size="1" id="billing-country" class="form-control" value="<?php echo $billing_country;?>">
+            <select name="billing_country" size="1" id="billing-country" class="form-control" value="">
               <option value="">Select Country..</option>
               <option value="Australia">Australia</option>
               <option value="Britain">Britain</option>
@@ -112,46 +106,46 @@
           </div>
         </div><br>
         <div class="form-group">
-          <div class="width30 floatL"><label>Email</label></div>
-          <div class="width70 floatR"><input type="text" id="billing-email" name="billing_email" placeholder="Email" class="form-control" value="<?php echo $billing_email;?>"><span class="error">* <?php echo $billing_emailErr;?></span><br><br></div>
+          <div class="width30 floatL"><label>Email</label></div><br><br>
+          <div class="width70 floatR"><input type="text" id="billing-email" name="billing_email" placeholder="Email" class="form-control" value=""><span class="error">* <?php echo $billing_emailErr;?></span><br><br></div>
         </div><br>
         <div class="form-group">
-          <div class="width30 floatL"><label>Phone Number</label></div>
-          <div class="width70 floatR"><input type="text" id="billing-phone-number" name="billing_phone_number" placeholder="Phone Number" class="form-control" value="<?php echo $billing_phone_number;?>"><span class="error">* <?php echo $billing_phone_numberErr;?></span><br><br></div>
+          <div class="width30 floatL"><label>Phone Number</label></div><br><br>
+          <div class="width70 floatR"><input type="text" id="billing-phone-number" name="billing_phone_number" placeholder="Phone Number" class="form-control" value=""><span class="error">* <?php echo $billing_phone_numberErr;?></span><br><br></div>
         </div><br>
         <div class="form-group">
-          <div class="width30 floatL"><label>ID Number</label></div>
-          <div class="width70 floatR"><input type="text" id="billing-id" name="billing_id" placeholder="ID Number" class="form-control" value="<?php echo $billing_id;?>"><span class="error">* <?php echo $billing_idErr;?></span><br><br></div>
+          <div class="width30 floatL"><label>ID Number</label></div><br><br>
+          <div class="width70 floatR"><input type="text" id="billing-id" name="billing_id" placeholder="ID Number" class="form-control" value=""><span class="error">* <?php echo $billing_idErr;?></span><br><br></div>
         </div><br><br/> 
         <p><b>Shipping Information <label><input name="check_address" type="checkbox" value="" id="check-address" value="<?php echo $check_address;?>"> Same as Billing Information?</label></b></p> 
         <div class="form-group">
           <div class="width30 floatL"><label>Firstname</label></div>
-          <div class="width70 floatR"><input type="text" id="shipping-first-name" name="shipping_first_name" placeholder="First Name" class="form-control" value="<?php echo $shipping_first_name;?>"><span class="error">* <?php echo $shipping_first_nameErr;?></span><br><br></div><br><br>
+          <div class="width70 floatR"><input type="text" id="shipping-first-name" name="shipping_first_name" placeholder="First Name" class="form-control" value=""><span class="error">* <?php echo $shipping_first_nameErr;?></span><br><br></div><br><br>
         </div>
         <div class="form-group">
           <div class="width30 floatL"><label>Lastname</label></div>
-          <div class="width70 floatR"><input type="text" id="shipping-last-name" name="shipping_last_name" placeholder="Last Name" class="form-control" value="<?php echo $shipping_last_name;?>"><span class="error">* <?php echo $shipping_last_nameErr;?></span><br><br></div>
+          <div class="width70 floatR"><input type="text" id="shipping-last-name" name="shipping_last_name" placeholder="Last Name" class="form-control" value=""><span class="error">* <?php echo $shipping_last_nameErr;?></span><br><br></div>
         </div><br><br><br>
         <div class="form-group">
           <div class="width30 floatL"><label>Address line 1</label></div>
-          <div class="width70 floatR"><input type="text" id="shipping-address-line1" name="shipping_address_line1" placeholder="Ship to Address line 1" class="form-control" value="<?php echo $shipping_address_line1;?>"><span class="error">* <?php echo $shipping_address_line1Err;?></span><br><br></div>
+          <div class="width70 floatR"><input type="text" id="shipping-address-line1" name="shipping_address_line1" placeholder="Ship to Address line 1" class="form-control" value=""><span class="error">* <?php echo $shipping_address_line1Err;?></span><br><br></div>
         </div><br><br>
         <div class="form-group">
           <div class="width30 floatL"><label>Address line 2</label></div>
-          <div class="width70 floatR"><input type="text" id="shipping-address-line2" name="shipping_address_line2" placeholder="Ship to Address line 2" class="form-control" value="<?php echo $shipping_address_line2;?>"><span class="error">* <?php echo $shipping_address_line2Err;?></span><br><br></div>
+          <div class="width70 floatR"><input type="text" id="shipping-address-line2" name="shipping_address_line2" placeholder="Ship to Address line 2" class="form-control" value=""><span class="error"></span><br><br></div>
         </div><br><br>
         <div class="form-group">
           <div class="width30 floatL"><label>Postal Code</label></div>
-          <div class="width70 floatR"><input type="text" id="shipping-postal-code" name="shipping_postal_code" placeholder="Postal Code" class="form-control" value="<?php echo $shipping_postal_code;?>"><span class="error">* <?php echo $shipping_postal_codeErr;?></span><br><br></div>
+          <div class="width70 floatR"><input type="text" id="shipping-postal-code" name="shipping_postal_code" placeholder="Postal Code" class="form-control" value=""><span class="error">* <?php echo $shipping_postal_codeErr;?></span><br><br></div>
         </div><br>
         <div class="form-group">
           <div class="width30 floatL"><label>City</label></div>
-          <div class="width70 floatR"><input type="text" id="shipping-city" name="shipping_city" placeholder="Ship to City" class="form-control" value="<?php echo $shipping_city;?>"><span class="error">* <?php echo $shipping_cityErr;?></span><br><br></div>
+          <div class="width70 floatR"><input type="text" id="shipping-city" name="shipping_city" placeholder="Ship to City" class="form-control" value=""><span class="error">* <?php echo $shipping_cityErr;?></span><br><br></div>
         </div><br>
         <div class="form-group">
           <div class="width30 floatL"><label>Country</label></div>
           <div class="width70 floatR">
-            <select name="shipping_country" size="1" id="shipping-country" class="form-control" value="<?php echo $shipping_country;?>">
+            <select name="shipping_country" size="1" id="shipping-country" class="form-control" value="">
               <option value="">Select Country..</option>
               <option value="Australia">Australia</option>
               <option value="Britain">Britain</option>
@@ -174,23 +168,23 @@
         </div><br>
         <div class="form-group">
           <div class="width30 floatL"><label>Email</label></div>
-          <div class="width70 floatR"><input type="text" id="shipping-email" name="shipping_email" placeholder="Email" class="form-control" value="<?php echo $shipping_email;?>"><span class="error">* <?php echo $shipping_emailErr;?></span><br><br></div>
+          <div class="width70 floatR"><input type="text" id="shipping-email" name="shipping_email" placeholder="Email" class="form-control" value=""><span class="error">* <?php echo $shipping_emailErr;?></span><br><br></div>
         </div><br>
         <div class="form-group">
           <div class="width30 floatL"><label>Phone Number</label></div>
-          <div class="width70 floatR"><input type="text" id="shipping-phone-number" name="shipping_phone_number" placeholder="Phone Number" class="form-control" value="<?php echo $shipping_phone_number;?>"><span class="error">* <?php echo $shipping_phone_numberErr;?></span><br><br></div>
+          <div class="width70 floatR"><input type="text" id="shipping-phone-number" name="shipping_phone_number" placeholder="Phone Number" class="form-control" value=""><span class="error">* <?php echo $shipping_phone_numberErr;?></span><br><br></div>
         </div><br>
         <div class="form-group">
           <div class="width30 floatL"><label>ID Number</label></div>
-          <div class="width70 floatR"><input type="text" id="shipping-id" name="shipping_id" placeholder="ID Number" class="form-control" value="<?php echo $shipping_id;?>"><span class="error">* <?php echo $shipping_idErr;?></span><br><br></div>
+          <div class="width70 floatR"><input type="text" id="shipping-id" name="shipping_id" placeholder="ID Number" class="form-control" value=""><span class="error">* <?php echo $shipping_idErr;?></span><br><br></div>
         </div><br><br>
         <div class="form-group">
           <div class="width30 floatL"><label>Delivery Comment</label></div>
-          <div class="width70 floatR"><input type="text" id="shipping-delivery-comment" name="shipping_delivery_comment" placeholder="Comment" class="form-control" value="<?php echo $shipping_comment;?>"></div>
+          <div class="width70 floatR"><input type="text" id="shipping-delivery-comment" name="shipping_delivery_comment" placeholder="Comment" class="form-control" value=""></div>
         </div><br>  
         <div class="form-group">
           <div class="row">
-            <div class="floatR"><br/><input class="AddressSubmit" type="submit"   value="Proceed to Payment" onclick="addressCheckout()"></div> 
+            <div class="floatR"><br/><input class="AddressSubmit" type="submit" value="Proceed to Payment" onclick="addressCheckout()"></div> 
           </div>
         </div>
       </form>      
@@ -201,8 +195,9 @@
     </div> 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-    <!---------js for cart------------->
-    <script src="cart.js">
+    <!---------js for Store ------------->
+    <script src="store.js">
+   
     </script>
   </body>
 </html>

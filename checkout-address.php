@@ -4,7 +4,7 @@ $billing_first_name = $billing_last_name = $billing_address_line1 = $billing_add
 $billing_first_nameErr = $billing_last_nameErr = $billing_address_line1Err = $billing_address_line2Err = $billing_postal_codeErr =$billing_cityErr =  $billing_countryErr = $billing_emailErr = $billing_phone_numberErr = $billing_idErr = "";
 $shipping_first_name = $shipping_last_name = $shipping_address_line1 = $shipping_address_line2 = $shipping_postal_code =$shipping_city =  $shipping_country = $shipping_email = $shipping_phone_number = $shipping_id = $shipping_comment = "";
 $shipping_first_nameErr = $shipping_last_nameErr = $shipping_address_line1Err = $shipping_address_line2Err = $shipping_postal_codeErr =$shipping_cityErr =  $shipping_countryErr = $shipping_emailErr = $shipping_phone_numberErr = $shipping_idErr = $shipping_commentErr = "";
- 
+
 if(isset($_SERVER['REQUEST_METHOD']) && $_SERVER["REQUEST_METHOD"] == 'POST' && !is_admin()) {
   if (empty($_POST["billing_first_name"])) {
     $billing_first_nameErr = "first name is required";
@@ -194,4 +194,14 @@ function address_input($data) {
   $data = htmlspecialchars($data);
   return $data;
 }
+echo $billing_first_name;
+echo $billing_last_name;
+echo $billing_address_line1;
+echo $billing_address_line2;
+echo $billing_postal_code;
+echo $billing_city;
+echo $billing_country;
+echo $billing_email;
+echo $billing_phone_number;
+echo $billing_id;
 ?>
